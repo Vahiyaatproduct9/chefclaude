@@ -113,7 +113,7 @@ form.add-ingredient-form {
     justify-content: space-between;
 }
 
-@media (aspect-ratio < 9/16) {
+@media (aspect-ratio < 5/8) {
     form.add-ingredient-form {
         flex-direction: column;
         margin: 0;
