@@ -2,7 +2,7 @@ const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients and suggests a recipe the user could make with some or all of those ingredients. You don't need to use every ingredient they mention. The recipe can include a few extra ingredients. Format your response in markdown for easy webpage rendering.
 `
 
-const API_KEY = "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"
+const API_KEY = process.env.CHEF_CLAUDE_API
 const MODEL_ID = "mistralai/mistral-7b-instruct"
 
 export async function getRecipeFromOpenRouter(ingredientsArr) {
@@ -14,7 +14,7 @@ export async function getRecipeFromOpenRouter(ingredientsArr) {
             headers: {
                 "Authorization": `Bearer ${API_KEY}`,
                 "Content-Type": "application/json",
-                "HTTP-Referer": "http://localhost:3000", // change if deployed
+                "HTTP-Referer": "http://vahiyaatproduct9.github.io/chefclaude", // change if deployed
                 "X-Title": "MyReactRecipeBot"
             },
             body: JSON.stringify({
