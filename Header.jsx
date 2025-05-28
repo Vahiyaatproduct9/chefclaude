@@ -1,4 +1,4 @@
-import snow from './snow.png'
+import snow from './blob/main/snow.png'
 export default function Header() {
     return (
         <header>
