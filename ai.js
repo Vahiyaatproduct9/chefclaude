@@ -2,7 +2,8 @@ const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients and suggests a recipe the user could make with some or all of those ingredients. You don't need to use every ingredient they mention. The recipe can include a few extra ingredients. Format your response in markdown for easy webpage rendering.
 `
 
-const API_KEY = process.env.CHEF_CLAUDE_API
+const API_KEY = import.meta.env.VITE_CHEF_CLAUDE_API;
+console.log(API_KEY)
 const MODEL_ID = "mistralai/mistral-7b-instruct"
 
 export async function getRecipeFromOpenRouter(ingredientsArr) {
