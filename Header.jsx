@@ -1,7 +1,8 @@
-export default function Header(){
-    return(
+import snow from './snow.png'
+export default function Header() {
+    return (
         <header>
-            <img src="snow.png" />
+            <img src={snow} />
             <h1>Chef CLAUDE</h1>
         </header>
     )
